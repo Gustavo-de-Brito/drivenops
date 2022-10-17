@@ -6,7 +6,7 @@ services:
     ports:
       - 6022:5432
     env_file:
-      - .env.test
+      - ./back-end/.env.test
     volumes: 
       - db:/var/lib/postgresql/data
     healthcheck:
@@ -26,6 +26,6 @@ services:
     links:
       - postgres_students
     env_file:
-      - .env.test
+      - ./back-end/.env.test
 volumes:
   db:
