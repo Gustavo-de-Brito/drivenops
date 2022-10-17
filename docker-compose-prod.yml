@@ -6,7 +6,7 @@ services:
     ports:
       - 6022:5432
     env_file:
-      - ./back-end/.env.prod
+      - ./back-end/.env
     volumes: 
       - db:/var/lib/postgresql/data
     healthcheck:
@@ -26,7 +26,7 @@ services:
     links:
       - postgres_students
     env_file:
-      - ./back-end/.env.prod
+      - ./back-end/.env
 
   react_app:
     container_name: react_app
