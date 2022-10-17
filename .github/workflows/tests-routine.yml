@@ -14,6 +14,7 @@ jobs:
           envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           envkey_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
           envkey_PORT: ${{ secrets.PORT }}
+          directory: back-end/
           file_name: .env.test
       - name: Run Tests
         run: docker-compose -f docker-compose-back-test.yml run node_app npm run test
