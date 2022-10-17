@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function StudentsListView() {
   const [ students, setStudents ] = useState([]);
@@ -31,6 +32,9 @@ function StudentsListView() {
         :
         <h3>Não há estudantes cadastrados</h3>
       }
+      <Link to='/'>
+        <button>Mostrar um(a) estudante aleatório(a)</button>
+      </Link>
     </>
   )
 }
