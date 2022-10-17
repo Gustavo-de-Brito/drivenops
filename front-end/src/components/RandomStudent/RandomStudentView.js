@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function RandomStudentView() {
   const [student, setStudent] = useState(null);
@@ -19,7 +20,14 @@ function RandomStudentView() {
     }
   }, []);
 
-  return student ? <h1>{student.name}</h1> : 'Carregando...';
+  return (
+    <>
+      {student ? <h1>{student.name}</h1> : 'Carregando...'}
+      <Link to='/students'>
+        <button>Listar todos os estudantes</button>
+      </Link>
+    </>
+  );
 }
 
 export default RandomStudentView;
